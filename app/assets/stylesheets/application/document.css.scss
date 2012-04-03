@@ -1,0 +1,25 @@
+html{
+  
+}
+body{
+  
+}
+#container{
+  width:100%;
+	max-width:$width-container;
+	margin:20px auto;
+	background:#fff;
+	@include border-radius(10px);
+	@include box-shadow(#ccc, 1px);
+}
+#main{
+  overflow:auto;
+}
+section.main{
+  .inner-section-main{
+    padding:20px;
+  }
+}
+aside.main{
+  float:left;
+}

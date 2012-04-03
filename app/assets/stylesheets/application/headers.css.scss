@@ -1,0 +1,11 @@
+header.website{
+  width:$width-container;
+	.inner-header-website{
+	  padding:10px;
+	}
+  nav.website{
+    ul{
+      @include list-float();
+    }
+  }
+}

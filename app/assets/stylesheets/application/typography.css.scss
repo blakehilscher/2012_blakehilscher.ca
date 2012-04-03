@@ -1,0 +1,43 @@
+/* Text */
+h1{
+	font-size:30px;
+	line-height:30px;
+}
+h2{
+	font-size:24px;
+	line-height:24px;
+}
+h3{
+	font-size:18px;
+	line-height:18px;
+}
+h4{
+	font-size:16px;
+	line-height:16px;
+}
+h5{
+  font-size:14px;
+  line-height:14px;
+}
+body{
+  font-family:$font-family;
+  color:$font-color;
+	font-size:$font-size;
+	line-height:$font-size + 6px;
+}
+strong{
+	font-weight:bold;
+}
+small{
+	font-size:11px;
+	font-weight:bold;
+}
+a,
+a:active,
+a:visited{
+	color:$link-color;
+  text-decoration:none;
+  &:hover{
+    text-decoration:underline;
+  }
+}

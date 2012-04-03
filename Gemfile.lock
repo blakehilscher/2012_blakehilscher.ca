@@ -113,7 +113,7 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    scss-boilerplate-rails (0.1.0)
+    scss-boilerplate-rails (0.1.1)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)

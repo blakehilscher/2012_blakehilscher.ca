@@ -1,0 +1,173 @@
+/**************************************************************
+	
+	@include list-reset(margin, orientation)
+	-
+	Reset a list and force the list items to float left.
+	
+**************************************************************/
+
+@mixin list-reset()
+{
+  list-style:none;
+  vertical-align:top;
+  margin:0;
+  padding:0;
+  overflow:auto;
+  li{
+    padding:0;
+    margin:0;
+  }
+}
+
+/**************************************************************
+	
+	@include list-float(margin, orientation)
+	-
+	Reset a list and force the list items to float left.
+	
+**************************************************************/
+
+@mixin list-float()
+{
+  @include list-reset();
+  li{
+    float:left;
+  }
+}
+
+
+/**************************************************************
+	
+	@include image-replace(image-name, file-extension);
+	-
+	Replace the element with this image
+	
+**************************************************************/
+@mixin image-replace($name, $ext: png)
+{
+	@include sized-background-image($name, $ext);
+	display:block;
+	text-indent:-9999px;
+	text-align:left;
+	border:0;
+}
+
+/**************************************************************
+
+	@include image-replace-auto(image, hover-image, ext)
+  -
+	Replace the element with this image.
+	Automatically generate a css class based on the image name.
+
+**************************************************************/
+@mixin image-replace-auto($name, $ext: png)
+{
+	.#{$name},
+	.#{$name}.active:hover {
+		@include image-replace($name, $ext);
+	}
+	input.#{$name} {
+		cursor:pointer;
+	}
+}
+
+/**************************************************************
+
+	@include image-bullet(image-name, image-position, file-extension);
+	-
+	Position an image the left or right of an element.
+		
+**************************************************************/
+@mixin image-bullet($name, $align:left, $ext: png)
+{
+	$filename: '#{$name}.#{$ext}';
+
+	display:block;
+	border:0;
+	background:image-url($filename) no-repeat scroll $align center transparent;
+	@include min-height(image-height( $filename ) - image-height( $filename ) / 4 );
+  padding-top:image-height( $filename ) / 4;
+	padding-#{$align}:image-width( $filename ) + 5px;
+
+	@if $align == right{
+		float:right;
+	}
+}
+
+/**************************************************************
+
+	@include image-bullet-auto(image-name, image-position, file-extension);
+	-
+	Position an image the left or right of an element.
+	Automatically generate a css class based on the image name.
+	
+**************************************************************/
+@mixin image-bullet-auto($name, $align:left, $ext: png)
+{
+	.#{$name} {
+		@include image-bullet($name, $align, $ext);
+	}
+}
+
+/**************************************************************
+
+	@include sized-background-image(image-name, file-extension);
+	-
+	Set the backgroud image and determine the width & height.
+
+**************************************************************/
+@mixin sized-background-image($name, $ext: png)
+{
+  $filename: '#{$name}.#{$ext}';
+	background:image-url($filename) top left no-repeat transparent;
+	width:image-width($filename);
+	height:image-height($filename);
+}
+
+
+
+/**************************************************************
+	
+	@include sprite-replace(image-name, number-of-sprites, file-extension);
+	-
+	Replace the element with this sprite sheet image
+	
+**************************************************************/
+@mixin sprite-replace($name, $count: 2, $ext: png)
+{
+  $filename: '#{$name}.#{$ext}';
+  $height: image-height($filename) / $count;
+  width:image-width($filename) !important;
+  height:$height !important;
+  display:block;
+	text-indent:-9999px;
+	overflow:hidden;
+	text-align:left;
+	border:0;
+	background:image-url($filename) no-repeat scroll top left transparent;
+	padding:0px !important;
+	margin:0px;
+	&:hover,
+	&.active,
+	&.second-state{
+	  background-position:0 ($height * -1);
+	}
+	@if $count >= 3{
+	  &.third-state{
+	    background-position:0 ($height * 2 * -1);
+	  }
+  }
+  @if $count >= 4{
+	  &.fourth-state{
+	    background-position:0 ($height * 3 * -1);
+	  }
+  }
+}
+
+@mixin sprite-replace-auto($name, $count: 2, $ext: png, $path: '')
+{
+  $filename: '#{$path}/#{$name}';
+  .#{$name}{
+    @include sprite-replace($filename, $count, $ext);    
+  }
+}
