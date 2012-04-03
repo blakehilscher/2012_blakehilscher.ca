@@ -10,6 +10,17 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require hamlcoffee
+//= require_tree ./templates
+//
 //= require jquery
 //= require jquery_ujs
 //= require h5bp
+//
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/blake_hilscher_ca
+//
+//= require_tree .
