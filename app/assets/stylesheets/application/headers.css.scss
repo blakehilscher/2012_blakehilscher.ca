@@ -5,17 +5,16 @@ header.application{
     padding:10px;
     border:1px solid $cm-blue;
     border-top:0;
-    @include background(linear-gradient($cl-blue, adjust-lightness($cl-blue, -10) ) );
+    @include background(linear-gradient($ch-blue, adjust-lightness($cl-blue, -5) ) );
     @include box-shadow(#f2f2f2 0px 2px 2px);
   }
   .brand-application{
     margin-left:20px;
   }
   nav.application{
-
     position:absolute;
-    right:40px;
-    top:58px;
+    right:30px;
+    top:54px;
   }
 
 }
@@ -28,19 +27,21 @@ nav.application{
   ul{ 
     @include list-float(); 
     li{
-      margin-left:8px;
+      margin-left:10px;
       a{
-        padding:4px 8px;
+        padding:5px 10px;
         color:#51717a;
         display:block;
       }
       &.nav-active a{
         background-color:$cd-blue;
         color:adjust-lightness($cl-blue, 15);
-
       }
     }
   }
-
-
+  a:hover{
+    text-decoration:none;
+    background-color:$cm-blue;
+    color:#fff;
+  }
 }

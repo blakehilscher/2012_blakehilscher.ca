@@ -1,5 +1,5 @@
 html{
-  background:#eee;
+  background:$cl-gold;
   
 }
 body{
@@ -9,11 +9,12 @@ body{
 	width:$width-container;
 	margin:0px auto;
 	background:#fff;
-	border-bottom:1px solid #ddd;
-	@include box-shadow(5px 5px 10px #eee);
 }
 #main{
   overflow:auto;
+  .inner-main{
+    padding:10px;
+  }
 }
 section.main{
   .inner-section-main{

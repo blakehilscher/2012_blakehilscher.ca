@@ -23,10 +23,11 @@ $invalid-background-color: #f0dddd;
 
 $width-container:960px;
 
-$cl-gold:#f2f0c8;
+$cl-gold:#eeedac;
 $cm-gold:#bdb86e;
 $cd-gold:#837c08;
 
 $cl-blue:#bbe3ee;
 $cm-blue:#6faabd;
 $cd-blue:#4a93ab;
+$ch-blue:adjust-saturation(adjust-lightness($cl-blue, 10), 10);
