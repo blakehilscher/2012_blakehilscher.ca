@@ -1,16 +1,16 @@
 html{
+  background:#eee;
   
 }
 body{
   
 }
 #container{
-  width:100%;
-	max-width:$width-container;
-	margin:20px auto;
+	width:$width-container;
+	margin:0px auto;
 	background:#fff;
-	@include border-radius(10px);
-	@include box-shadow(#ccc, 1px);
+	border-bottom:1px solid #ddd;
+	@include box-shadow(5px 5px 10px #eee);
 }
 #main{
   overflow:auto;
