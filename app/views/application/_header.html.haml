@@ -1,3 +1,10 @@
 %header.application
   .inner-header-application
-    %h1.brand-blakehilscher Blake Hilscher, Developer & Ruby Enthusiast
+    %h1.brand-application= link_to "Blake Hilscher, Developer & Ruby Enthusiast", root_path, :class => 'brand-blakehilscher'
+    
+    %nav.application
+      %ul
+        %li.nav-active= link_to 'Home', home_path
+        %li= link_to 'Blog', "#{home_path}/#about"
+        %li= link_to 'Code', 'https://github.com/blakehilscher/', :target => :blank
+        %li= link_to 'Contact', "#{home_path}/#contact"

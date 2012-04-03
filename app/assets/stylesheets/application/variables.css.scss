@@ -12,11 +12,13 @@ $line-height: 1.4;  // 1.4 for true normalization
 $font-color: #222;
 $font-family: sans-serif;
 $font-size: 13px;
-$link-color: #00e;
-$link-hover-color: #06e;
-$link-visited-color: #551a8b;
+
+$link-color: #4a93ab;
+$link-hover-color: adjust-lightness(#4a93ab, -10);
+$link-visited-color: adjust-lightness(#4a93ab, -10);
+
 $selected-font-color: #fff;
-$selected-background-color: #0d2177;
+$selected-background-color: #4a93ab;
 $invalid-background-color: #f0dddd;
 
 $width-container:960px;
