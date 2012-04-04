@@ -2,6 +2,20 @@
 img{
   vertical-align:top;
 }
+.photograph{
+  >.inner-photograph{
+    overflow:hidden;
+    display:inline-block;
+    background-color:white;
+    border:1px solid #bbb;
+    padding:1px;
+    @include border-radius(2px);
+    img{
+      @include border-radius(2px);
+      width:100%;
+    }
+  }
+}
 .thumbnail{
   overflow:hidden;
   display:inline-block;
@@ -37,4 +51,35 @@ img{
   background-color:#BDEDB6;
   border-color:#264421;
   color: #264421;
+}
+
+.splat-base{
+  border-color:$cm-base;
+  color:$cd-base;
+  @include background(linear-gradient($ch-base, $cl-base));
+}
+.splat-base-d{
+  border-color:$cd-base;
+  color:$ch-base;
+  @include background(linear-gradient($cm-base, $cd-base));
+}
+.splat-high{
+  border-color:$cm-high;
+  color:$cd-high;
+  @include background(linear-gradient($ch-high, $cl-high));
+}
+.splat-high-d{
+  border-color:$cd-high;
+  color:$ch-high;
+  @include background(linear-gradient($cm-high, $cd-high));
+}
+.splat-comp{
+  border:$cm-comp;
+  color:$cd-comp;
+  @include background(linear-gradient($ch-comp, $cl-comp));
+}
+.splat-comp-d{
+  border-color:$cd-comp;
+  color:$ch-comp;
+  @include background(linear-gradient($cm-comp, $cd-comp));
 }

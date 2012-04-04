@@ -9,10 +9,16 @@
     #container
       = render "header"
       
-      #main{ :role => "main" }
+      #main{:role => "main"}
         = render "flashes"
-        .inner-main= yield
 
+        #content{:class => "#{'with-aside_main' if content_for? :aside_main}"}
+          .inner-content= yield
+          
+        - if content_for? :aside_main
+          %aside.main
+            .inner-aside-main= yield :aside_main
+      
       = render "footer"
 
     -# Javascript at the bottom for fast page loading

@@ -22,7 +22,6 @@ group :assets do
   
   gem 'haml_coffee_assets'
   gem 'execjs'
-
 end
 
 gem 'haml-rails' # Optional - to generate haml

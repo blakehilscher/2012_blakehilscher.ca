@@ -3,9 +3,8 @@ header.application{
   .inner-header-application{
     position:relative;
     padding:10px;
-    border:1px solid $cm-green;
-    border-top:0;
-    @include background(linear-gradient($ch-green, $cl-green) );
+    border:1px solid $cm-base;
+    @include background(linear-gradient($ch-base, $cl-base) );
     @include box-shadow(#f2f2f2 0px 2px 2px);
   }
   .brand-application{
@@ -30,12 +29,12 @@ nav.application{
       margin-left:10px;
       a{
         padding:5px 10px;
-        color:$cd-green;
+        color:$cd-base;
         display:block;
       }
       &.nav-active a{
-        background-color:$cd-green;
-        color:$ch-green;
+        background-color:$cd-base;
+        color:$ch-base;
         &:hover{
           cursor:default;
         }
@@ -44,7 +43,7 @@ nav.application{
   }
   a:hover{
     text-decoration:none;
-    background-color:$cm-green;
-    color:$ch-green;
+    background-color:$cm-base;
+    color:$ch-base;
   }
 }

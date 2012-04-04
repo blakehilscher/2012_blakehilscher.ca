@@ -8,10 +8,14 @@ $fontstack-verdana:Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans"
 $fontstack-trebuchet: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 $fontstack-impact:Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 
+h1,h2,h3,h4,h5{
+  font-family:$fontstack-trebuchet;
+}
 /* Text */
 h1{
 	font-size:30px;
 	line-height:30px;
+	color:$cm-comp;
 }
 h2{
 	font-size:24px;

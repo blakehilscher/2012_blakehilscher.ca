@@ -1,26 +1,36 @@
-html{
-  background:$ch-green;
-  
-}
-body{
-  
+html,body{
+  background:$ch-comp;
 }
 #container{
 	width:$width-container;
-	margin:0px auto;
+	margin:10px auto;
 	background:#fff;
+	@include box-shadow(adjust-lightness($cl-comp, 10) 2px 2px 20px);
 }
 #main{
   overflow:auto;
-  .inner-main{
+}
+#content{
+  >.inner-content{
     padding:20px;
   }
-}
-section.main{
-  .inner-section-main{
-    padding:20px;
+  &.with-aside_main{
+    float:left;
+    width:640px;
+  }
+  h1,h2,h3,h4,h5,h6,p,ul{
+    &:first-child{
+      margin-top:0px;
+    }
+    &:last-child{
+      margin-bottom:0px;
+    }
   }
 }
 aside.main{
   float:left;
+  width:240px;
+  .inner-aside-main{
+    padding:20px;
+  }
 }
