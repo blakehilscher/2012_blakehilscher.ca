@@ -1,3 +1,3 @@
-class Admin:PostsController < AdminController
+class Admin::PostsController < AdminController
   
 end

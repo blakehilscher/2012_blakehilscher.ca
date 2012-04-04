@@ -31,6 +31,7 @@ nav.application{
         padding:5px 10px;
         color:$cd-base;
         display:block;
+        @include border-radius(4px);
       }
       &.nav-active a{
         background-color:$cd-base;

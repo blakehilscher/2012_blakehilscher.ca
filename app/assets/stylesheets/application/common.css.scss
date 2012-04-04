@@ -6,7 +6,7 @@ img{
   >.inner-photograph{
     overflow:hidden;
     display:inline-block;
-    background-color:white;
+    background:#eee;
     border:1px solid #bbb;
     padding:1px;
     @include border-radius(2px);
@@ -15,13 +15,6 @@ img{
       width:100%;
     }
   }
-}
-.thumbnail{
-  overflow:hidden;
-  display:inline-block;
-  background-color:white;
-  border:1px solid #dddddd;
-  padding:1px;
 }
 .notice-message{
   @include border-radius(10px);

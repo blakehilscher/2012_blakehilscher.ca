@@ -1,10 +1,10 @@
 %header.application
+  = render 'admin/nav' if user_signed_in?    
   .inner-header-application
     %h1.brand-application= link_to "Blake Hilscher, Developer & Ruby Enthusiast", root_path, :class => 'brand-blakehilscher'
     
     %nav.application
       %ul
-        %li.nav-active= link_to 'Home', root_path
-        %li= link_to 'Blog', "/#about"
+        %li.nav-active= link_to 'Blog', "/#about"
         %li= link_to 'Code', 'https://github.com/blakehilscher/', :target => :blank
         %li= link_to 'Contact', "/#contact"

@@ -1,0 +1,17 @@
+nav.admin{
+  background:$cd-comp;
+  color:$cl-comp;
+  ul{
+    @include list-float;
+  }
+  a{
+    border-right:1px solid $cm-comp;
+    color:$cl-comp;
+    padding:4px 10px;
+    &:hover{
+      text-decoration:none;
+      background-color:$cm-comp;
+      color:$ch-comp;
+    }
+  }
+}

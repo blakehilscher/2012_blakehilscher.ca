@@ -1,0 +1,41 @@
+.rockhil-form
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = devise_error_messages!
+    .field.field-header
+      .field-describe
+        %h2= f.label :email, "Edit #{resource_name.to_s.humanize}"
+    
+    .field.field-email_field
+      .field-describe= f.label :email
+      .field-request= f.email_field :email
+      
+    .field.field-password_field
+      .field-describe
+        = f.label :password
+        .field-describe-detail (leave blank if you don't want to change it)
+      .field-request= f.password_field :password, :autocomplete => 'off'
+      
+    .field.field-password_field
+      .field-describe= f.label :password_confirmation
+      .field-request= f.password_field :password_confirmation
+      
+    .field.field-password_field
+      .field-describe
+        = f.label :current_password
+        .field-describe-detail (we need your current password to confirm your changes)
+      .field-request= f.password_field :current_password
+      
+    .field.field-actions
+      .field-describe
+      .field-request= f.submit "Update"
+
+.rockhil-form
+  .field.field-header
+    .field-describe
+      %h3 Cancel my account
+    
+    .field
+      %p
+        Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
+        
+= link_to "Back", :back

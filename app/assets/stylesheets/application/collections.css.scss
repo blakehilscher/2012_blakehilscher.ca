@@ -19,3 +19,13 @@
     }
   }
 }
+
+.collection-links{
+  margin:10px 0;
+  >ul{
+    @include list-float;
+    li{
+      margin-right:10px;
+    }
+  }
+}

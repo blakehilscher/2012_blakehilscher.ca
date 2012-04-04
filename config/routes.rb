@@ -5,6 +5,13 @@ BlakeHilscherCa::Application.routes.draw do
   match 'home' => 'pages#home'
   
   devise_for :users
+  
+  resources :posts, :only => [:index, :show]
+  
+  namespace :admin do
+    root :to => 'posts#index'
+    resources :posts
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,25 @@
+.rockhil-form
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  
+    .field.field-header
+      .field-describe
+        %h2= f.label :email, "Sign In"
+  
+    .field.field-textfield
+      .field-describe= f.label :email
+      .field-request= f.email_field :email
+    
+    .field.field-password_field
+      .field-describe= f.label :password
+      .field-request= f.password_field :password
+    
+    - if devise_mapping.rememberable?
+      .field.field-checkbox
+        .field-request= f.check_box :remember_me
+        .field-describe= f.label :remember_me
+  
+    .field.field-actions
+      .field-describe
+      .field-request= f.submit "Sign in"
+    
+= render "links"
