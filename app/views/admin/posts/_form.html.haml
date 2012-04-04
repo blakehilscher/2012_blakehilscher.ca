@@ -1,0 +1,15 @@
+.rockhil-form
+  = form_for([:admin, post]) do |f| 
+    .field.field-textfield
+      .field-describe= f.label :title
+      .field-request= f.text_field :title
+      
+    .field.field-textarea
+      .field-describe= f.label :content
+      .field-request= f.text_area :content
+      
+    .field.field-actions
+      .field-describe
+      .field-request
+        = f.submit "#{action_name.humanize} Post"
+        = link_to "Back to Posts", admin_posts_path, :class=>'not-important'

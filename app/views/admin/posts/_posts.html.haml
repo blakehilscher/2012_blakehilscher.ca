@@ -1,0 +1,23 @@
+.collection.collection-posts
+  %ul
+    %li.collection-record.collection-header
+      .inner-record
+        .record-column.post-title
+          .inner-column Title
+        .record-column.post-content
+          .inner-column Content
+        .record-column.post-actions
+          .inner-column Manage
+
+    - posts.each do |post|
+      %li.collection-record{:id => "record-#{post.id}", :data => {:id => post.id}}
+        .inner-record
+          .record-column.post-title
+            .inner-column= post.title
+          .record-column.post-content
+            .inner-column= post.content
+          .record-column.record-actions
+            .inner-column
+              = link_to "Edit Post", edit_admin_post_path(post)
+              = link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete, :class=>'record-destroy'
+            

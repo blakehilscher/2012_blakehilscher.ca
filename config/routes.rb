@@ -9,10 +9,10 @@ BlakeHilscherCa::Application.routes.draw do
   resources :posts, :only => [:index, :show]
   
   namespace :admin do
-    root :to => 'posts#index'
+    root :to => 'pages#dashboard'
     resources :posts
   end
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

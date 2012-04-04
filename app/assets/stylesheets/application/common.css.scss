@@ -76,3 +76,40 @@ img{
   color:$ch-comp;
   @include background(linear-gradient($cm-comp, $cd-comp));
 }
+
+.not-important{
+  background-color:$cm-base;
+}
+
+.button{
+  padding:4px 8px;
+  border-style:solid;
+  border-width:1px;
+  @include inline-block;
+  @include border-radius(4px);
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+.button-base{
+  @extend .button;
+  @extend .splat-base;
+  &:hover{
+    @extend .splat-base-d;
+  }
+}
+.button-comp{
+  @extend .button;
+  @extend .splat-comp;
+  &:hover{
+    @extend .splat-comp-d;
+  }
+}
+.button-high{
+  @extend .button;
+  @extend .splat-high;
+  &:hover{
+    @extend .splat-high-d;
+  }
+}

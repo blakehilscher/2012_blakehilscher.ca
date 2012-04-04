@@ -15,3 +15,10 @@ nav.admin{
     }
   }
 }
+
+nav.admin-posts{
+  margin:10px 0;
+  a{
+    @extend .button-comp;
+  }
+}

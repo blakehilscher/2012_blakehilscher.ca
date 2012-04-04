@@ -1,0 +1,7 @@
+%nav.admin-posts
+  %ul
+    - unless controller_and_action_eql :posts, :new
+      %li= link_to "Create New Post", new_admin_post_path
+      
+    - unless controller_and_action_eql :posts, :index
+      %li= link_to "View All Posts", new_admin_post_path

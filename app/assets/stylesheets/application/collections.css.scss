@@ -1,3 +1,40 @@
+.collection{
+  >ul{
+    @include list-reset;
+    >li{
+      border-bottom:1px solid #ddd;
+      padding-bottom:5px;
+    }
+  }
+  .collection-record{
+    &.collection-header{
+      font-weight:bold;
+      background-color:#eee;
+      text-transform:uppercase;
+    }
+    >.inner-record{
+      max-height:45px;
+      overflow:hidden;
+    }
+  }
+  .record-column{
+    float:left;
+    width:20%;
+    >.inner-column{
+      padding:5px 10px 0;
+    }
+  }
+  .record-actions{
+    padding-top:5px;
+    a{
+      @extend .button-base;
+      &.record-destroy{
+        @extend .button-high;
+      }
+    }
+  } 
+}
+
 .collection-social_media{
   >ul{
     @include list-float;
@@ -7,16 +44,7 @@
     }
   }
   a{
-    @extend .splat-comp;
-    padding:4px 8px;
-    border-style:solid;
-    border-width:1px;
-    @include inline-block;
-    @include border-radius(4px);
-    &:hover{
-      text-decoration:none;
-      @extend .splat-comp-d;
-    }
+    @extend .button-comp;
   }
 }
 
