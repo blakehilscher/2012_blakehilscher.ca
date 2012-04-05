@@ -26,15 +26,15 @@ $width-container:880px;
 $cm-base:#31a54c;
 $cl-base:adjust-saturation(adjust-lightness($cm-base, 40), -10);
 $ch-base:adjust-saturation(adjust-lightness($cm-base, 50), -10);
-$cd-base:adjust-saturation(adjust-lightness($cm-base, -20), 50);
+$cd-base:adjust-saturation(adjust-lightness($cm-base, -15), 50);
 
 $cm-comp:#317ba5;
 $cl-comp:adjust-saturation(adjust-lightness($cm-comp, 40), -10);
 $ch-comp:adjust-saturation(adjust-lightness($cm-comp, 50), -10);
-$cd-comp:adjust-saturation(adjust-lightness($cm-comp, -20), 50);
+$cd-comp:adjust-saturation(adjust-lightness($cm-comp, -15), 50);
 
 $cm-high:#a54131;
 $cl-high:adjust-saturation(adjust-lightness($cm-high, 40), -10);
 $ch-high:adjust-saturation(adjust-lightness($cm-high, 50), -10);
-$cd-high:adjust-saturation(adjust-lightness($cm-high, -20), 50);
+$cd-high:adjust-saturation(adjust-lightness($cm-high, -15), 50);
 

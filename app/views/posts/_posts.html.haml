@@ -9,7 +9,8 @@
           .record-column.post-content
             .inner-column= post.content
             
-          .record-column.post-content
+          .record-column.post-actions
             .inner-column
-              %a{:href => "#"}
+              = link_to "Read More", post_path(post), :class => 'post-show'
+              
   = paginate posts

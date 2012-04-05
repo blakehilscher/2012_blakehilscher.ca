@@ -37,7 +37,7 @@
 nav.pagination{
   overflow:hidden;
   margin:10px 0;
-  .current{
+  .current,.gap{
     color:$cm-base;
     background:$cl-base;
     display:block;
@@ -46,11 +46,11 @@ nav.pagination{
     border:1px solid $cl-base;
   }
   .page,.prev,.next,.first,.last{
+    float:left;
     a{
       color:$cm-base;
       background:$ch-base;
       display:block;
-      float:left;
       padding:5px 10px;
       border:1px solid $ch-base;
       border-right:1px solid $cl-base;
