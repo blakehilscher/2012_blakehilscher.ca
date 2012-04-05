@@ -2,7 +2,7 @@ class Admin::PostsController < AdminController
   load_and_authorize_resource
   
   def index
-    respond_with @posts = Post.all
+    respond_with @posts = current_user.posts.order(:created_at).page(params[:page])
   end
 
   def show

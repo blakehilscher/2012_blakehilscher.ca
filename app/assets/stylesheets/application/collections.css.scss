@@ -34,6 +34,56 @@
     }
   } 
 }
+nav.pagination{
+  overflow:hidden;
+  margin:10px 0;
+  .current{
+    color:$cm-base;
+    background:$cl-base;
+    display:block;
+    float:left;
+    padding:5px 10px;
+    border:1px solid $cl-base;
+  }
+  .page,.prev,.next,.first,.last{
+    a{
+      color:$cm-base;
+      background:$ch-base;
+      display:block;
+      float:left;
+      padding:5px 10px;
+      border:1px solid $ch-base;
+      border-right:1px solid $cl-base;
+      border-bottom:1px solid $cl-base;
+      &:hover{
+        text-decoration:none;
+        background:$cl-base;
+        color:$cd-base;
+        border-color:$cl-base;
+      }
+    }
+  }
+  .prev,
+  .next{
+    a{
+    }
+  }
+  .first,
+  .last{
+    a{
+      background:$cm-base;
+      color:$ch-base;
+      border-color:$cm-base;
+      font-weight:bold;
+      &:hover{
+        text-decoration:none;
+        background:$cm-base;
+        color:$ch-base;
+        border-color:$cm-base;
+      }
+    }
+  }
+}
 
 .collection-social_media{
   >ul{
