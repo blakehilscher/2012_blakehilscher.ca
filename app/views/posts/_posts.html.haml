@@ -1,0 +1,15 @@
+.collection-posts
+  %ul
+    - posts.each do |post|
+      %li.collection-record{:id => "record-#{post.id}", :data => {:id => post.id}}
+        .inner-record
+          .record-column.post-title
+            .inner-column
+              %h3= post.title
+          .record-column.post-content
+            .inner-column= post.content
+            
+          .record-column.post-content
+            .inner-column
+              %a{:href => "#"}
+  = paginate posts

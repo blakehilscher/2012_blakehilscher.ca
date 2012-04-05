@@ -1,4 +1,6 @@
 %h1 Welcome to the home page
 
+= render 'posts/posts', :posts => @posts
+
 - content_for :aside_main do
   = render 'about'
