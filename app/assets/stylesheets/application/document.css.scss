@@ -5,18 +5,22 @@ html,body{
 	width:$width-container;
 	margin:10px auto;
 	background:#fff;
-	@include box-shadow(adjust-lightness($cl-comp, 10) 2px 2px 20px);
 }
 #main{
   overflow:auto;
+  background:image-url('bg-main.png') right repeat-y #eee;
 }
 #content{
+  background-color:#fff;
   >.inner-content{
     padding:20px;
   }
   &.with-aside_main{
     float:left;
     width:640px;
+    >.inner-content{
+      border-right:1px solid #ddd;
+    }
   }
   h1,h2,h3,h4,h5,h6,p,ul{
     &:first-child{

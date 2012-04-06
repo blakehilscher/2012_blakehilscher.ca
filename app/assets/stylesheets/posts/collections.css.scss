@@ -1,5 +1,26 @@
-.collection-posts{
+.collection-admin_posts{
   .post-content{
     width:60%;
+  }
+}
+
+.collection-posts{
+  ul{
+    @include list-reset;
+  }
+  .collection-record{
+    margin:20px 0;
+    &:first-child{
+      margin-top:0px;
+    }
+  }
+  .post-title{
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  .post-show{
+    @extend .button-comp;
+    margin-top:10px;
   }
 }

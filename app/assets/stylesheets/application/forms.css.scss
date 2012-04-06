@@ -1,17 +1,17 @@
 .rockhil-form{  
   .field{
     overflow:auto;
-    border-bottom:1px solid #eee;
+    border-bottom:1px solid #ddd;
     padding-top:10px;
     padding-bottom:10px;
 
     .field-describe{
-      width:30%;
+      width:20%;
       float:left;
     }
     .field-request{
       float:left;
-      width:70%;
+      width:80%;
     }
     &:first-child{
       padding-top:0px;
