@@ -2,7 +2,7 @@ header.application{
   width:$width-container;
   .inner-header-application{
     position:relative;
-    padding:10px;
+    padding:30px 10px;
     border:1px solid $cm-base;
     @include background(linear-gradient($ch-base, $cl-base) );
     @include box-shadow(#f2f2f2 0px 2px 2px);
@@ -36,9 +36,6 @@ nav.application{
       &.nav-active a{
         background-color:$cd-base;
         color:$ch-base;
-        &:hover{
-          cursor:default;
-        }
       }
     }
   }

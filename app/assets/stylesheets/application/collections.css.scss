@@ -44,10 +44,12 @@ nav.pagination{
     float:left;
     padding:5px 10px;
     border:1px solid $cl-base;
+    line-height:19px;
   }
   .page,.prev,.next,.first,.last{
     float:left;
     a{
+      line-height:19px;
       color:$cm-base;
       background:$ch-base;
       display:block;

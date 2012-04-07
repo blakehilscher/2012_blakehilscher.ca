@@ -1,15 +1,10 @@
-.rockhil-form
-  = form_for([:admin, post]) do |f| 
-    .field.field-textfield
-      .field-describe= f.label :title
-      .field-request= f.text_field :title
-      
-    .field.field-textarea
-      .field-describe= f.label :content
-      .field-request= f.text_area :content
-      
-    .field.field-actions
-      .field-describe
-      .field-request
-        = f.submit "#{action_name.humanize} Post"
-        = link_to "Back to Posts", admin_posts_path, :class=>'not-important'
+= simple_form_for [:admin, post], :html => { :class => 'form-horizontal' } do |f|
+  %fieldset
+    %legend= "#{controller.action_name.capitalize} Post"
+    
+    = f.input :title
+    = f.input :content, :as => :ckeditor, :input_html => { :toolbar => 'Full' }
+    
+    .form-actions
+      = f.submit nil, :class => 'btn btn-primary'
+      = link_to 'Cancel', admin_posts_path, :class => 'btn'

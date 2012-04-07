@@ -9,9 +9,11 @@ gem 'sqlite3'
 gem 'devise'
 gem 'cancan'
 
-gem "ckeditor"
+gem "carrierwave-mongoid", :require => 'carrierwave/mongoid'
 gem "carrierwave"
 gem "mini_magick"
+gem 'simple_form'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,8 +23,10 @@ group :assets do
   gem 'uglifier'
   gem 'compass-rails'
   gem 'compass-h5bp'
+  gem 'bootstrap-sass', '~> 2.0.2'
+  gem "ckeditor", "3.7.0.rc3"
+  
   gem 'scss-boilerplate-rails'
-  gem "rails-backbone"
   
   gem 'haml_coffee_assets'
   gem 'execjs'

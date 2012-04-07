@@ -9,10 +9,10 @@
     #container
       = render "header"
       
-      #main{:role => "main"}
+      #main{:role => "main", :class => "#{'with-aside_main' if content_for? :aside_main}"}
         = render "flashes"
 
-        #content{:class => "#{'with-aside_main' if content_for? :aside_main}"}
+        #content
           .inner-content= yield
           
         - if content_for? :aside_main
